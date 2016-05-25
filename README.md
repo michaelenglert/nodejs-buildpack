@@ -11,6 +11,30 @@ Additional documentation can be found at the [CloudFoundry.org](http://docs.clou
 
 For information on deploying Node.js applications visit [CloudFoundry.org](http://docs.cloudfoundry.org/buildpacks/node/index.html).
 
+## Using the AppDynamics Agent Framework
+
+The AppDynamics Agent Framework causes an application to be automatically configured to work with a bound <a href="http://www.appdynamics.com">AppDynamics Service </a>.
+
+<table>
+  <tr>
+    <td><strong>Detection Criterion</strong></td><td>Existence of a single bound AppDynamics service. The existence of an AppDynamics service defined by the <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES"><code>VCAP_SERVICES</code></a> payload containing a service name with <code>appdynamics</code> as a substring.</td>
+  </tr>
+</table>
+
+### User-Provided Service
+When binding AppDynamics using a user-provided service, it must have name or tag with `appdynamics` in it. The credential payload can contain the following entries:
+
+| Name | Description
+| ---- | -----------
+| `account-access-key` | The account access key to use when authenticating with the controller
+| `account-name` | (Optional) The account name to use when authenticating with the controller
+| `application-name` | (Optional) the application's name
+| `host-name` | The controller host name
+| `node-name` | (Optional) the application's node name
+| `port` | The controller port
+| `ssl-enabled` | (Optional) Whether or not to use an SSL connection to the controller
+| `tier-name` | (Optional) the application's tier name
+
 # Building the Buildpack
 
 1. Make sure you have fetched submodules
@@ -57,7 +81,7 @@ Find our guidelines [here](./CONTRIBUTING.md).
 
 ## Help and Support
 
-Join the #buildpacks channel in our [Slack community] (http://slack.cloudfoundry.org/) 
+Join the #buildpacks channel in our [Slack community] (http://slack.cloudfoundry.org/)
 
 ## Reporting Issues
 
