@@ -150,23 +150,38 @@ describe 'CF NodeJS Buildpack' do
     end
   end
 
-  context 'with a cached buildpack', :cached do
-    context 'in an air gapped environment' do
-      let (:app_name) { 'node_web_app_for_airgapped_environment' }
+  context 'with a cached buildpack in an air gapped environment', :cached do
+    before(:each) do
+      `cf unbind-staging-security-group public_networks`
+      `cf unbind-staging-security-group dns`
+    end
 
-      before(:each) do
-        `cf unbind-staging-security-group public_networks`
-        `cf unbind-staging-security-group dns`
+    after(:each) do
+      `cf bind-staging-security-group public_networks`
+      `cf bind-staging-security-group dns`
+    end
+
+    context 'with no npm version specified' do
+      let (:app_name) { 'node_web_app_airgapped_no_npm_version' }
+
+      subject(:app) do
+        Machete.deploy_app(app_name, env: {'BP_DEBUG' => '1'})
       end
 
-      after(:each) do
-        `cf bind-staging-security-group public_networks`
-        `cf bind-staging-security-group dns`
-      end
-
-      it 'is running' do
+      it 'is running with the default version of npm' do
         expect(app).to be_running
         expect(app).not_to have_internet_traffic
+        expect(app).to have_logged("Using default npm version")
+        expect(app).to have_logged('DEBUG: default_version_for node is')
+      end
+    end
+
+    context 'with invalid npm version specified' do
+      let (:app_name) { 'node_web_app_airgapped_invalid_npm_version' }
+
+      it 'is not running and prints an error message' do
+        expect(app).not_to be_running
+        expect(app).to have_logged("We're unable to download the version of npm")
       end
     end
   end

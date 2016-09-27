@@ -7,10 +7,11 @@ This is based on the [Heroku buildpack] (https://github.com/heroku/heroku-buildp
 
 Additional documentation can be found at the [CloudFoundry.org](http://docs.cloudfoundry.org/buildpacks/node/index.html).
 
-## Using the Buildpack
+### Buildpack User Documentation
 
-For information on deploying Node.js applications visit [CloudFoundry.org](http://docs.cloudfoundry.org/buildpacks/node/index.html).
+Official buildpack documentation can be found at http://docs.cloudfoundry.org/buildpacks/node/index.html).
 
+<<<<<<< HEAD
 ## Using the AppDynamics Agent Framework
 
 The AppDynamics Agent Framework causes an application to be automatically configured to work with a bound <a href="http://www.appdynamics.com">AppDynamics Service </a>.
@@ -36,6 +37,9 @@ When binding AppDynamics using a user-provided service, it must have name or tag
 | `tier-name` | (Optional) the application's tier name
 
 # Building the Buildpack
+=======
+### Building the Buildpack
+>>>>>>> upstream/master
 
 1. Make sure you have fetched submodules
 
@@ -64,7 +68,7 @@ When binding AppDynamics using a user-provided service, it must have name or tag
   cf push my_app -b custom_node_buildpack
   ```
 
-## Testing
+### Testing
 Buildpacks use the [Machete](https://github.com/cloudfoundry/machete) framework for running integration tests.
 
 To test a buildpack, run the following command from the buildpack's directory:
@@ -73,20 +77,20 @@ To test a buildpack, run the following command from the buildpack's directory:
 BUNDLE_GEMFILE=cf.Gemfile bundle exec buildpack-build
 ```
 
-More options can be found on Machete's [Github page.](https://github.com/cloudfoundry/machete)
+More options can be found on Machete's [GitHub page.](https://github.com/cloudfoundry/machete)
 
-## Contributing
+### Contributing
 
 Find our guidelines [here](./CONTRIBUTING.md).
 
-## Help and Support
+### Help and Support
 
 Join the #buildpacks channel in our [Slack community] (http://slack.cloudfoundry.org/)
 
-## Reporting Issues
+### Reporting Issues
 
 Open an issue on this project
 
-## Active Development
+### Active Development
 
 The project backlog is on [Pivotal Tracker](https://www.pivotaltracker.com/projects/1042066)

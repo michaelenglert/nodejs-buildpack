@@ -1,3 +1,82 @@
+v1.5.20 Sep 19, 2016
+=====================
+
+* Add node 6.6.0, remove node 6.4.0
+  (https://www.pivotaltracker.com/story/show/130488207)
+
+* Remove Heroku references from staging output
+  (https://www.pivotaltracker.com/story/show/127931269)
+
+v1.5.19 Sep 01, 2016
+=====================
+
+* Add node 4.5.0, remove node 4.4.6
+  (https://www.pivotaltracker.com/story/show/128431641)
+
+* Add node 6.4.0, remove node 6.3.0
+  (https://www.pivotaltracker.com/story/show/128863283)
+
+* Add node 6.5.0, remove node 6.3.1
+  (https://www.pivotaltracker.com/story/show/129366607)
+
+* Add support for New Relic configuration through service binding
+  (https://www.pivotaltracker.com/story/show/110040634)
+
+* Filter credentials from dependency urls printed during staging
+  (https://www.pivotaltracker.com/story/show/126514693)
+
+* Add default_versions support for specifying node default version
+  (https://www.pivotaltracker.com/story/show/126394943)
+
+v1.5.18 Jul 25, 2016
+=====================
+
+* Add nodejs 6.3.1, remove nodejs 6.2.2
+  (https://www.pivotaltracker.com/story/show/126830705)
+
+v1.5.17 Jul 15, 2016
+=====================
+
+* Make buildpacks.cloudfoundry.org the default url for buildpack dependencies
+  (https://www.pivotaltracker.com/story/show/121757949)
+
+* Update node to 4.4.7
+  (https://www.pivotaltracker.com/story/show/123264921)
+
+* Update node to 6.3.0
+  (https://www.pivotaltracker.com/story/show/125266811)
+
+v1.5.16 Jun 28, 2016
+=====================
+
+* Add nodejs 0.10.46, remove nodejs 0.10.44
+  (https://www.pivotaltracker.com/story/show/122177127)
+
+* Add nodejs 0.12.15, remove nodejs 0.12.13
+  (https://www.pivotaltracker.com/story/show/122177127)
+
+* Add nodejs 4.4.6, remove nodejs 4.4.4
+  (https://www.pivotaltracker.com/story/show/122177127)
+
+* Add nodejs 5.12.0, remove nodejs 5.10.1
+  (https://www.pivotaltracker.com/story/show/122177127)
+
+* Add nodejs 6.2.2. Remove nodejs 6.2.0
+  (https://www.pivotaltracker.com/story/show/121759045)
+
+v1.5.15 Jun 08, 2016
+=====================
+
+* Add nodejs 6.2.0 and 6.2.1, remove nodejs 6.0.0 and 6.1.0
+  (https://www.pivotaltracker.com/story/show/120806559)
+  (https://www.pivotaltracker.com/story/show/119775517)
+
+* Add nodejs 4.4.5, remove nodejs 4.4.3
+  (https://www.pivotaltracker.com/story/show/120225945)
+
+* Add a helpful error message for case where npm fails to download
+  (https://www.pivotaltracker.com/story/show/118775597)
+
 v1.5.14 May 06, 2016
 =====================
 
