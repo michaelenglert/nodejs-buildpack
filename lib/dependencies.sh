@@ -48,6 +48,7 @@ update_server_appd() {
     local INIT_FILE=$(get_file_initial)
     python $BP_DIR/extensions/appdynamics/extension_appdy.py $build_dir
     local TEST_DATA=$(cat /tmp/_appd_module.txt)
+    echo $build_dir/$INIT_FILE
     echo $TEST_DATA | cat - $build_dir/$INIT_FILE > /tmp/_server.js && mv /tmp/_server.js $build_dir/$INIT_FILE
   fi
 }
