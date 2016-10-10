@@ -36,7 +36,7 @@ rebuild_node_modules() {
 BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
 
 get_file_initial() {
-  local FILE_NAME=$(python -c 'import json,sys; f = open("package.json","r"); obj = json.load(f);print obj["scripts"]["start"].split()[1]; f.close()')
+  local FILE_NAME=$(python -c 'import json,sys; f = open("package.json","r"); obj = json.load(f);print obj["scripts"]["start"]; f.close()' | sed -n 's/.*\b \(.*\.js*\).*/\1/p')
   echo $FILE_NAME
 }
 
